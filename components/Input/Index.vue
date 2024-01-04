@@ -2,6 +2,7 @@
   <input
       v-bind="$attrs"
       type="text"
+      :value="modelValue"
       class="text-input"
       placeholder="Placeholder"
       @input="$emit('update:modelValue', $event.target.value)"

@@ -1,7 +1,7 @@
 <template>
   <div class="todo-item">
     <InputCheckbox @toggle="updateItem" :label="item.title" :value="item.completed"></InputCheckbox>
-    <ButtonIcon @click="deleteItem" class="btn-secondary btn-icon-small" icon="/_nuxt/assets/icons/trash-can-regular.svg"></ButtonIcon>
+    <Button @click="deleteItem" class="btn-secondary btn-icon-small" icon="/_nuxt/assets/icons/trash-can-regular.svg"></Button>
   </div>
 </template>
 
