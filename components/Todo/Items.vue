@@ -1,6 +1,6 @@
 <template>
     <template v-for="(item, index) in items" :key="index">
-      <TodoItem @delete="deleteItem(item.id, index)" :item="item"></TodoItem>
+      <TodoItem @update="updateItem" @delete="deleteItem(item.id, index)" :submitting="submitting" :item="item"></TodoItem>
     </template>
 </template>
 
@@ -9,10 +9,17 @@ export default {
   props: {
     items: {
       type: Array,
-      default: []
+      default: [],
+    },
+    submitting: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
+    updateItem(item) {
+      this.$emit('updateItem', item)
+    },
     deleteItem(itemId, index){
       this.$emit('deleteItem', {
         item_id:  itemId,

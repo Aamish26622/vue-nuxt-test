@@ -1,5 +1,5 @@
 <template>
   <div class="card-parent">
-    <Card></Card>
+    <Todo/>
   </div>
 </template>

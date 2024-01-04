@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="submit" class="search-form" action="">
-    <Input type="text" v-model="title" class="w-80"></Input>
+    <Input type="text" v-model="title" class="w-80" placeholder="Need to review code"></Input>
     <Button :disabled="submitting" type="submit" class="btn-primary btn-medium" label="Add"></Button>
   </form>
 </template>
