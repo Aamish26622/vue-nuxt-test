@@ -213,3 +213,10 @@ input[type=checkbox] {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.error-page {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
