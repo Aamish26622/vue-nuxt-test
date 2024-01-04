@@ -1,6 +1,6 @@
 <template>
   <label class="checkbox-input-label">
-    <input class="checkbox-input" :checked="value" type="checkbox">
+    <input @change="valueChanged($event)" class="checkbox-input" :checked="value" type="checkbox">
     <span class="checkmark"></span>
     {{ label }}
   </label>
@@ -17,5 +17,10 @@ export default {
       default: ''
     }
   },
+  methods: {
+    valueChanged(e) {
+      this.$emit("toggle", e.target.checked ? 1 : 0);
+    },
+  }
 }
 </script>

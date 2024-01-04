@@ -1,6 +1,6 @@
 <template>
     <template v-for="(item, index) in items" :key="index">
-      <TodoItem :item="item"></TodoItem>
+      <TodoItem @delete="deleteItem(item.id, index)" :item="item"></TodoItem>
     </template>
 </template>
 
@@ -12,5 +12,13 @@ export default {
       default: []
     }
   },
+  methods: {
+    deleteItem(itemId, index){
+      this.$emit('deleteItem', {
+        item_id:  itemId,
+        index: index
+      })
+    }
+  }
 }
 </script>
