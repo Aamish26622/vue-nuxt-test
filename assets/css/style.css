@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #FF8769;
+    --primary-border-color : #A1AFC8;
+    --primary-border-focus-color : #FF592F;
+    --primary-font-color : #000000;
+    --primary-button-color : #ffffff;
+    --primary-button-background-color : #FF8769;
+    --primary-button-background-hover-color : #FF592F;
+}
+
+@font-face {
+    font-family: 'Happy Times';
+    src: url('../fonts/Happy Times/happy-times-at-the-ikob.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM';
+    src: url('../fonts/DM/DMSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+body{
+    background: var(--primary-color);
+    font-family: "DM", serif;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.card-parent{
+    min-width: 100%;
+    min-height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rounded-white-card{
+    padding: 32px;
+    background: #fff;
+    border-radius: 32px;
+    width: 700px;
+    gap: 32px;
+}
+
+.text-input{
+    height: 42px;
+    gap: 4px;
+    color: var(--primary-border-color);
+    border: 2px solid var(--primary-border-color);
+    border-radius: 8px;
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.text-input:focus{
+    border-color: var(--primary-border-focus-color);
+}
+
+.text-input:focus-visible{
+    outline: none;
+}
+
+.app-heading{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 63px;
+    font-family: "Happy Times", serif;
+    color: var(--primary-font-color);
+}
+
+.search-form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.btn{
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-icon-large{
+    width: 56px;
+    height: 56px;
+}
+
+.btn-icon-medium{
+    width: 48px;
+    height: 48px;
+}
+
+.btn-icon-small{
+    width: 34px;
+    height: 34px;
+}
+
+.btn-icon-medium img, .btn-icon-large img{
+    width: 24px;
+    height: 24px;
+}
+
+.btn-icon-small img{
+    width: 18px;
+    height: 18px;
+}
+
+.btn-primary{
+    color: var(--primary-button-color);
+    background: var(--primary-button-background-color);
+    border: 0;
+}
+
+.btn-secondary{
+    background: var(--primary-button-color);
+    color: var(--primary-button-background-color);
+    border: 2px solid var(--primary-button-background-color);
+}
+
+.btn-primary:hover{
+    background: var(--primary-button-background-hover-color);
+}
+
+.btn-secondary:hover{
+    border-color: var(--primary-button-background-hover-color);
+}
+
+.btn-medium{
+    padding: 12px 24px 12px 24px;
+    font-size: 20px;
+    line-height: 26px;
+    gap: 8px;
+}
+
+.btn-large{
+    padding: 16px 24px 16px 24px;
+    font-size: 20px;
+    line-height: 26px;
+    gap: 8px;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary-border-color);
+    border-radius: 4px;
+}
+
+.checkbox-input-label .checkmark:after {
+    left: 6px;
+    bottom: 5px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0px 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-input-label input:checked ~ .checkmark {
+    border-color: var(--primary-button-background-color);
+    background-color: var(--primary-button-background-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-input-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-input-label{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-bottom: 1px solid #D7DDE7;
+    margin: 0px 12px;
+}
